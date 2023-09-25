@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "865b814c-0a01-4aef-99e5-816a502fe9af",
+		"name": "CloudKitchen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"Akansha\",\r\n  \"lastname\": \"Tiwari\",\r\n  \"email\": \"AkanshaTiwari@dell.com\",\r\n  \"password\": \"password\",\r\n  \"contactNo\": \"1234567890\",\r\n  \"address\": \"Test\",\r\n  \"role\": \"Admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/Account/Register",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"Account",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"grantType\": \"refresh_token\",\r\n  \"clientId\": \"string\",\r\n  \"contactNo\": \"1234567890\",\r\n  \"refreshToken\": \"46011e5caa9041ab984bb71c001c0264\",\r\n  \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/Token/Login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"Token",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllCatagory",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://localhost:7259",
+			"type": "default"
+		}
+	]
+}
